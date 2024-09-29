@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* 4 columns */
+    grid-gap: 10px; /* Space between cards */
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: green; /* Green when face down */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.card.flipped {
+    background-color: blue; /* Blue when clicked */
+}
+
+.card.matched {
+    opacity: 0; /* Remove matched cards visually while keeping their space */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    /* Existing styles */
+    transition: background-color 0.2s, opacity 0.5s; /* Add opacity transition */
+}
